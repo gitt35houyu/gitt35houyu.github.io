@@ -125,6 +125,39 @@
 <p>(3) 验证是否成功</p>
 <p>安装完成后, 退出终端重新进来: 看到这个Base开头表明安装好了.base是默认的虚拟环境.</p>
 <p>(4) 安装spark</p>
+<p>上传压缩包spark-3.2.0-bin-hadoop3.2.tgz</p>
+<p>解压</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf spark-3.2.0-bin-hadoop3.2.tgz -C /export/server/</span><br></pre></td></tr></table></figure>
+
+<p>由于spark目录名称很⻓, 给其一个软链接：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln -s /export/server/spark-3.2.0-bin-hadoop3.2 /export/server/spark</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">export JAVA_HOME=/export/server/jdk1.8.0_281</span><br><span class="line">export PYSPARK_PYTHON=export/server/anaconda3/envs/pyspark/bin/python</span><br><span class="line">export SPARK_HOME=/export/server/spark</span><br><span class="line">export HADOOP_HOME=/export/server/hadoop-3.3.0 </span><br><span class="line">export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop</span><br></pre></td></tr></table></figure>
+
+<p>(6) 测试bin &#x2F;pyspark</p>
+<p>
+        <span class="lazyload-img-span">
+        <img   
+           data-src="D:\hexo\blog\source\images\图片3.png" >
+        </sapn>
+      </p>
+<p>输入：sc.parallelize([1,2,3,4,5]).map(lambda x: x + 1).collect()</p>
+<p>
+        <span class="lazyload-img-span">
+        <img   
+           data-src="D:\hexo\blog\source\images\图片2.png" >
+        </sapn>
+      </p>
+<p>(7) 访问WEB UI</p>
+<p>4040端口是一个WEBUI端口, 可以在浏览器内打开.</p>
+<p>
+        <span class="lazyload-img-span">
+        <img   
+           data-src="D:\hexo\blog\source\images\图片4.png" >
+        </sapn>
+      </p>
 
         <!-- 分类文章 -->
         
