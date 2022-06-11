@@ -6,7 +6,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>  Blog |    white.</title>
+  <title>  Eagle配置 |    white.</title>
   <meta name="description" content="A minimalist theme for hexo.">
   <!-- 标签页图标 -->
   
@@ -99,60 +99,63 @@
 <div class="body-outer">
   <div class="body-inner">
     
+<article class="post-inner">
+  <div class="post-content-outer">
+    <div class="post-intro">
+      <div class="post-title animate__animated  animate__fadeInUp">Eagle配置</div>
+      <div class="meta-intro animate__animated  animate__fadeInUp">6月 11 2022</div>
+      
+    </div>
+    <div class="post-content-inner">
+      <div class="post-content-inner-space">
 
-    <section class="archive-outer">
-    <section class="archive-inner">
+      </div>
+      <div class="post-content-main animate__animated  animate__fadeInUp">
+        <!-- top型目录 -->
         
-        
-        
-        
-            
-            
-        <div class="archive-name animate__animated  animate__fadeInUp">2022</div>
-        
-          <a  href="/2022/06/11/Eagle%E9%85%8D%E7%BD%AE/">
-          <div class="archive-post animate__animated  animate__fadeInUp">
-            <div class="archive-post-title">Eagle配置</div>
-            <div class="archive-post-date">06-11</div>
-            <!-- 6月 11 -->
-          </div>
-          </a>
-        
-        
-        
-          <a  href="/2022/06/08/kafka-API%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/">
-          <div class="archive-post animate__animated  animate__fadeInUp">
-            <div class="archive-post-title">kafka API使用方法</div>
-            <div class="archive-post-date">06-08</div>
-            <!-- 6月 8 -->
-          </div>
-          </a>
-        
-        
-        
-          <a  href="/2022/06/08/Kafka%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%93%8D%E4%BD%9C/">
-          <div class="archive-post animate__animated  animate__fadeInUp">
-            <div class="archive-post-title">Kafka命令行操作</div>
-            <div class="archive-post-date">06-08</div>
-            <!-- 6月 8 -->
-          </div>
-          </a>
-        
-        
-        
-          <a  href="/2022/06/08/Kafka%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">
-          <div class="archive-post animate__animated  animate__fadeInUp">
-            <div class="archive-post-title">Kafka环境配置</div>
-            <div class="archive-post-date">06-08</div>
-            <!-- 6月 8 -->
-          </div>
-          </a>
-        
-        
-    </section>
-</section>
+        <p>   1、上传安装包</p>
+<p>解压</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf Eagle的压缩包名</span><br></pre></td></tr></table></figure>
 
+<p>2、修改环境变量</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/profile</span><br></pre></td></tr></table></figure>
 
+<p>需要修改的地方</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">kafka.eagle.zk.cluster.alias=cluster1</span><br><span class="line">cluster1.zk.list=node1:2181,node2:2181,node3:2181</span><br><span class="line">cluster1.kafka.eagle.broker.size=3</span><br><span class="line"></span><br><span class="line">kafka.eagle.url=jdbc:sqlite:/export/data/db/ke.db</span><br></pre></td></tr></table></figure>
+
+<p>启动前需要手动创建&#x2F;export&#x2F;data&#x2F;db目录</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir /export/data/db</span><br></pre></td></tr></table></figure>
+
+<p>3、启动Eagle</p>
+<p>需要先启动kafka和zookeeper再启动Eagle</p>
+<p>再bin目录执行</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ke.sh start</span><br></pre></td></tr></table></figure>
+
+<p>4、访问WEB页面</p>
+<p>
+        <span class="lazyload-img-span">
+        <img   
+           data-src="D:\hexo\blog\source\images\图片32.png" >
+        </sapn>
+      </p>
+<p>
+        <span class="lazyload-img-span">
+        <img   
+           data-src="D:\hexo\blog\source\images\图片33.png" >
+        </sapn>
+      </p>
+
+        <!-- 分类文章 -->
+        
+      </div>
+      <div class="post-content-inner-space">
+        
+      </div>
+   </div>
+    <!-- 评论 -->
+    
+  </div>
+</article>
   </div>
 </div>
 
